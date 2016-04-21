@@ -1,27 +1,29 @@
-body{
-	margin:0;
-	padding:0;
 
-}
-#container{
-	width:500px;
+#val{
+	width:600px;
 	margin:0 auto;
 	font-family:helvetica;
-	font-size: 1.2em;
+	font-size:1em;
 }
 input{
-	border-radius: 5%;
-	height:1.5em;
-	width:10em;
-	padding:0.3em;
+	border-radius: 5px;
+	height:30px;
+	width:300px;
+	padding:5px;
 	border:1px solid gray;
-	font-family:helvetica;
-	font-size: 1.2em;
-	margin-bottom:1em;
+	font-size:1em;
+	margin-bottom:10px;
 
 }
 label{
+
+	width:200px;
 	float:left;
-	width:150px;
-	padding-top:15px;
+	padding-top:7px;
+}
+#submitButton{
+	height:40px;
+	margin-left:206px;
+	width:100px;
+}
 }
