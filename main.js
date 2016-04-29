@@ -1,15 +1,20 @@
 $("form").submit(function(event){
+	var errorMessage = "";
 	event.preventDefault();
-	function validateEmail(email) {
+	function isValidateEmailAddress(emailAddress) {
 	 var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-	 return emailReg.test(email);
+	 return emailReg.test(emailAddress);
+};
+if (!isValidateEmailAddress($("#email").val())){
+	errorMessage=errorMessage+"<br />Please enter a valid email address";
 }
-if (!validateEmail($("#email").val())){
-alert("not valid");
+if (!$.isNumeric($("#phone").val())){
+	errorMessage=errorMessage+"<br />Please enter a valid phone number";
 }
-else{
-alert('correcttooo');
+if($(passOne).val() != $("passTwo").val()){
+	errorMessage=errorMessage+"<br /> Passwords do not match";
 }
 
+$("#error").html(errorMessage);
 
 });
