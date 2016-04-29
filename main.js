@@ -14,7 +14,11 @@ if (!$.isNumeric($("#phone").val())){
 if($(passOne).val() != $("passTwo").val()){
 	errorMessage=errorMessage+"<br /> Passwords do not match";
 }
+if(errorMessage==""){
+	alert("success");
+}else{
 
 $("#error").html(errorMessage);
+}
 
 });
